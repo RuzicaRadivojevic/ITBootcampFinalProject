@@ -2,7 +2,6 @@ package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -15,9 +14,11 @@ public class HomePage {
     @FindBy(css = "#block_top_menu > ul > li:nth-child(1) > ul > li:nth-child(2) > ul > li:nth-child(3) > a")
     WebElement summerDresses;
 
+    @FindBy(xpath = "/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[1]/ul/li[2]/a")
+    WebElement dresses;
+
     @FindBy(id = "contact-link")
     WebElement contactUs;
-
 
     @FindBy(xpath = "/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a")
     WebElement signIn;
@@ -42,7 +43,8 @@ public class HomePage {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-    public void clickOnAddToCardButton(){
+
+    public void clickOnAddToCardButton() {
         addToCart.click();
     }
 
@@ -62,15 +64,9 @@ public class HomePage {
         signIn.click();
     }
 
-    public String SummerDressesGetText() {
-        return summerDresses.getText();
-    }
-
-
     public String getAddedToCartMessage() {
         return addedToCart.getText();
     }
-
 
     public WebElement getFirstDress() {
         return firstDress;
@@ -91,5 +87,11 @@ public class HomePage {
     public String getNameOfTheProductText() {
         return nameOfTheProduct.getText();
     }
+
+    public WebElement getDresses() {
+        return dresses;
+    }
 }
+
+
 
