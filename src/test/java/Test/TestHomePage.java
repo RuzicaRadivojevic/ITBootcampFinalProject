@@ -1,6 +1,7 @@
 package Test;
 
 import BaseTest.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -27,7 +28,7 @@ public class TestHomePage extends BaseTest {
     public void testDoesBrowserOpenCorrectPageAndIfTheProductIsAddedInTheCart() throws InterruptedException {
         hoverToElement(homePage.getWomen());
         hoverToElement(homePage.getSummerDresses());
-        softAssert.assertEquals(homePage.SummerDressesGetText(), "Summer Dresses");
+        softAssert.assertEquals(homePage.getSummerDresses().getText(), "Summer Dresses");
         homePage.clickSummerDresses();
         softAssert.assertEquals(driver.getCurrentUrl(), "http://automationpractice.com/index.php?id_category=11&controller=category");
         hoverToElement(homePage.getFirstDress());
@@ -39,4 +40,14 @@ public class TestHomePage extends BaseTest {
         softAssert.assertAll();
     }
 
+    @Test
+    public void testIfWomenCategoryContainsDressesSectionAndIfItOpensTheCorrectPage() {
+        hoverToElement(homePage.getWomen());
+        waitForElementVisibility(homePage.getDresses());
+        hoverToElement(homePage.getDresses());
+        softAssert.assertEquals(homePage.getDresses().getText(), "DRESSES");
+        homePage.getDresses().click();
+        softAssert.assertEquals(driver.getCurrentUrl(),"http://automationpractice.com/index.php?id_category=8&controller=category");
+        softAssert.assertAll("Test didn't pass!");
+    }
 }

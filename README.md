@@ -1,27 +1,22 @@
 <html>
-<h1> FinalProject_AutomationTest</h1>
-<h3>Final project on the IT Bootcamp Course for QA Tester</h3>
+<h1> Final_Automation_Project</h1>
+<h3>Final project on ITBootcamp Course for QA Tester</h3>
 <body>
 <h5>The site <a href="http://automationpractice.com/index.php">MyStore</a>  is being tested.
-Use Selenium to work with the elements on the website, and TestNG to write tests. Apply Page Object Model.</h5>
+Used Selenium to work with the elements on the website, and TestNG to write tests. Applied Page Object Model.</h5>
 <ul>
-<li>Test when you on the home page of the site if you stop mouse on the WOMEN button and then from there select Summer Dresses,
- did you goes to the correct page. </li>
- <li>Test when you on the home page of the site if you stop mouse on the DRESSES button and then from there select Summer Dresses,
-did you goes to the correct page</li>
-<li>Make sure the previous two points send user to the same page.</li>
-<li>Choose second dress from the Summer Dresses offer. Put in the cart two such dresses, M size in white color.</li>
-<li>Check it is the cart really contains two dresses with the appropriate name, in white, M size.</li>
-<li>Test it is the search bar works. Type ‘yellow’ and look the search result.
- The expected outcome is show of three items, wherein each item has a choice of yellow.</li>
- <li>Click on "Contact us" and check the form for sending user questions.</li>
+<li>Test when you are on the home page of the site if you stop mouse on the WOMEN button and then from there select Summer Dresses,
+ does it lead to the correct page and if the first dress on that page is successfully added to the cart.</li>
+ <li>Test when you are on the home page of the site if you stop mouse on the DRESSES button and click it,
+does it lead to the correct page</li>
+<li>After picking the first dress on summer dresses page, check if the cart contains the correct name of the added dress, and also if the item is deleted from the cart after clicking trash button.</li>
+<li>Check if the person can sign in with existing credentials .</li>
+<li>Check if the person can sign in with non-existing credentials, if only one of the two required fields is entered or none of them.</li>
+<li>Check if the person can successfully create an account, if the sign out button is visible on the main page, and if it successfully signs out of the account.</li>
+<li>Click on contact us, check if it opens the correct form to insert data.</li>
+<li>Check if the input data in contact us form is successfully sent.</li>
 <li>Make sure the icons in the follow us menu at the bottom of the page send user to the appropriate addresses
  (icons for Facebook, Twitter, YouTube ...)</li>
- <li>Find how to automatically generate a data set,
- and create an xlsx or xls file whoose is fully with the data needed to send 30 questions.</li>
- <li>Send 30 questions where the data on each message is read from an xlsx or xls file.
- For each message, check if the sending was successful.</li>
- 
  </ul>
 <p><b>Bonus:</b></p>
 <ul>
